@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌿 Jennifern's Plant Wall 🌿</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', cursive, fantasy;
+            background: linear-gradient(45deg, #7fb069, #8fbc8f, #90a955, #a4c3a2, #b8ddb8);
+            background-size: 300% 300%;
+            animation: rainbow-bg 10s ease-in-out infinite;
+            color: #2d3e2d;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        @keyframes rainbow-bg {
+            0%, 100% { background-position: 0% 0%; }
+            25% { background-position: 100% 100%; }
+            50% { background-position: 0% 100%; }
+            75% { background-position: 100% 0%; }
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            max-width: 800px;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 4em;
+            color: #2d3e2d;
+            text-shadow: 3px 3px 0px #c8e6c8, 6px 6px 10px rgba(0,0,0,0.2);
+            margin: 0;
+            animation: bounce 3s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .subtitle {
+            font-size: 2em;
+            color: #1e4620;
+            text-shadow: 2px 2px 0px #c8e6c8;
+            background: rgba(240,255,240,0.8);
+            padding: 20px 30px;
+            border: 3px dashed #5a7c5a;
+            border-radius: 20px;
+            margin: 0;
+        }
+
+        .blink {
+            animation: blink 2s linear infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        .nav-button {
+            background: linear-gradient(45deg, #7fb069, #c8e6c8, #8fbc8f);
+            border: 4px ridge #4a6741;
+            border-radius: 25px;
+            padding: 30px 50px;
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #2d3e2d;
+            text-shadow: 2px 2px 0px #f0fff0;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: pulse 2s ease-in-out infinite;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .nav-button:hover {
+            transform: scale(1.1) rotate(2deg);
+            border: 4px ridge #90a955;
+        }
+
+        .nav-button small {
+            font-size: 0.6em;
+            font-style: italic;
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .subtitle {
+                font-size: 1.5em;
+                padding: 15px 20px;
+            }
+            
+            .nav-button {
+                font-size: 1.8em;
+                padding: 25px 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-container {
+                padding: 20px 10px;
+                gap: 30px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .subtitle {
+                font-size: 1.3em;
+                padding: 12px 15px;
+            }
+            
+            .nav-button {
+                font-size: 1.5em;
+                padding: 20px 30px;
+            }
+        }
+
+        @keyframes sparkle {
+            0% { opacity: 1; transform: scale(1) rotate(0deg); }
+            50% { opacity: 0.7; transform: scale(1.2) rotate(180deg); }
+            100% { opacity: 0; transform: scale(0.5) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h1>🌿 Happy Birthday Jennifern!!! 🌿</h1>
+        
+        <div class="subtitle">
+            Welcome to your plant wall website
+            <span class="blink">✨</span>
+        </div>
+
+        <a href="plant-care-guide.html" class="nav-button">
+            🌿 REAL Plant Care Guide! 🌿
+            <small>Click for serious plant wisdom!</small>
+        </a>
+    </div>
+
+    <script>
+        // Add some extra Y2K flair with random sparkles
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.innerHTML = '✨';
+            sparkle.style.position = 'fixed';
+            sparkle.style.left = Math.random() * window.innerWidth + 'px';
+            sparkle.style.top = Math.random() * window.innerHeight + 'px';
+            sparkle.style.fontSize = '20px';
+            sparkle.style.pointerEvents = 'none';
+            sparkle.style.zIndex = '999';
+            sparkle.style.animation = 'sparkle 2s ease-out forwards';
+            
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => {
+                sparkle.remove();
+            }, 2000);
+        }
+
+        // Create sparkles occasionally
+        setInterval(createSparkle, 3000);
+
+        // Welcome message in true Y2K style
+        window.onload = function() {
+            setTimeout(() => {
+                alert("🌿 Happy Birthday Jennifern! 🌿\n\nClick the button below for your complete plant care guide!\n\nMade with love and maximum nostalgia! ✨");
+            }, 1000);
+        }
+    </script>
+</body>
+</html> 

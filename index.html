@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Jennifern's Plant Wall...</title>
+    <meta http-equiv="refresh" content="0; url=plant-wall-scrapbook.html">
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7);
+            background-size: 400% 400%;
+            animation: rainbow 3s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .loading {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            border: 5px ridge #ff6b6b;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            animation: bounce 1s ease-in-out infinite alternate;
+        }
+        
+        @keyframes bounce {
+            from { transform: translateY(-10px); }
+            to { transform: translateY(10px); }
+        }
+        
+        h1 {
+            color: #ff6b6b;
+            font-size: 2em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        p {
+            color: #666;
+            margin: 10px 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <h1>🌿 Loading Jennifern's Plant Wall... 🌿</h1>
+        <p>Taking you to the scrapbook!</p>
+    </div>
+    
+    <script>
+        // Fallback redirect in case meta refresh doesn't work
+        setTimeout(function() {
+            window.location.href = 'plant-wall-scrapbook.html';
+        }, 500);
+    </script>
+</body>
+</html> 
